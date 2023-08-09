@@ -10,8 +10,4 @@
     <Compile Include="Library.fs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FSharpPlus" Version="1.4.1" />
-  </ItemGroup>
-
 </Project>
