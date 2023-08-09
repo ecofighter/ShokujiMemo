@@ -44,7 +44,28 @@ namespace ShokujiMemoAndroid
 		{
 			
 			// aapt resource value: 0x7F010000
-			public const int myButton = 2130771968;
+			public const int button1 = 2130771968;
+			
+			// aapt resource value: 0x7F010001
+			public const int calendarView1 = 2130771969;
+			
+			// aapt resource value: 0x7F010002
+			public const int main_contents = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int textEvening = 2130771971;
+			
+			// aapt resource value: 0x7F010004
+			public const int textMidday = 2130771972;
+			
+			// aapt resource value: 0x7F010005
+			public const int textMisc = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int textMorning = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int toolbar = 2130771975;
 			
 			static Id()
 			{
@@ -61,6 +82,9 @@ namespace ShokujiMemoAndroid
 			
 			// aapt resource value: 0x7F020000
 			public const int Main = 2130837504;
+			
+			// aapt resource value: 0x7F020001
+			public const int toolbar = 2130837505;
 			
 			static Layout()
 			{
@@ -95,7 +119,16 @@ namespace ShokujiMemoAndroid
 			public const int app_name = 2130968576;
 			
 			// aapt resource value: 0x7F040001
-			public const int hello = 2130968577;
+			public const int evening = 2130968577;
+			
+			// aapt resource value: 0x7F040002
+			public const int midday = 2130968578;
+			
+			// aapt resource value: 0x7F040003
+			public const int misc = 2130968579;
+			
+			// aapt resource value: 0x7F040004
+			public const int morning = 2130968580;
 			
 			static String()
 			{
@@ -103,6 +136,22 @@ namespace ShokujiMemoAndroid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7F050000
+			public const int NoActionBar = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

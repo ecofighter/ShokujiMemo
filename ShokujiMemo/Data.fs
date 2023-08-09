@@ -13,9 +13,12 @@ type Memo = { Date: DateTime; Contents: string; Modified: DateTime; } with
 [<Struct; IsReadOnly; RequireQualifiedAccess>]
 type MemoPad =
   val private Value: Map<DateTime, (string * DateTime)>
-  new(value) = { Value = value; }
-  member inline this.Add (memo:Memo) =
+  private new(value) = { Value = value; }
+  member this.Add(date:DateTime, contents:string, modified:DateTime) =
+    this.Value.Add(date, (contents, modified))
+  member this.Add(memo:Memo) =
     this.Value.Add(memo.Date, (memo.Contents, memo.Modified))
-  member this.Between (start:DateTime) (finish:DateTime) : MemoPad =
+  member this.Between(start:DateTime, finish:DateTime) : MemoPad =
     let filtered = Map.filter (fun k _ -> start <= k && k <= finish) this.Value
     in new MemoPad(filtered)
+  static member Empty = new MemoPad(Map.empty)
