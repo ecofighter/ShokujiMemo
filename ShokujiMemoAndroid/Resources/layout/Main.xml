@@ -28,41 +28,61 @@
                 android:text="@string/breakfast"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt" />
             <EditText
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:layout_marginLeft="5pt"
+                android:layout_marginRight="5pt"
                 android:id="@+id/textBreakfast" />
             <TextView
                 android:text="@string/lunch"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt" />
             <EditText
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:layout_marginLeft="5pt"
+                android:layout_marginRight="5pt"
                 android:id="@+id/textLunch" />
             <TextView
                 android:text="@string/dinner"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt"/>
             <EditText
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:layout_marginLeft="5pt"
+                android:layout_marginRight="5pt"
                 android:id="@+id/textDinner" />
             <TextView
                 android:text="@string/misc"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt" />
             <EditText
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="5pt"
+                android:layout_marginLeft="5pt"
+                android:layout_marginRight="5pt"
                 android:id="@+id/textMisc" />
             <Button
                 android:text="@string/jump_to_today"

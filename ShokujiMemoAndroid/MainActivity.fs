@@ -26,6 +26,8 @@ type MainActivity () =
     // Set our view from the "main" layout resource
     this.SetContentView(Resource.Layout.Main)
 
+    base.SetTheme(Resource.Style.ShokujiMemoThemeLight)
+
     let calendar = this.FindViewById<CalendarView>(Resource.Id.calendarView1)
     // let since = new DateTime(1970, 1, 1, 0, 0, 0)
     // let duration = selectedDate.ToDateTime() - since
@@ -44,6 +46,21 @@ type MainActivity () =
       Log.Debug("ShokujiMemoAndroid", "Button Clicked") |> ignore
     )
 
+    if bundle <> null then
+      selectedDate <-
+        try
+          let (year, month, day) = (bundle.GetInt("selectedDateYear"), bundle.GetInt("selectedDateMonth"), bundle.GetInt("selectedDateDay"))
+          Log.Debug("ShokujiMemoAndroid", sprintf "Restored: %d %d %d" year month day) |> ignore
+          { Year = year; Month = month; Day = day }
+        with
+          _ -> Log.Debug("ShokujiMemoAndroid", "Not Found Date in Bundle") |> ignore
+               Date.fromDateTime(DateTime.Now)
+
+      let since = new DateTime(1970, 1, 1, 0, 0, 0)
+      let duration = selectedDate.ToDateTime() - since
+      calendar.SetDate((int64)duration.TotalMilliseconds, true, true)
+
+
   override this.OnStop() =
     Log.Debug("ShokujiMemoAndroid", "OnStop") |> ignore
     base.OnStop ()
@@ -54,18 +71,3 @@ type MainActivity () =
     outState.PutInt("selectedDateDay", selectedDate.Day)
     Log.Debug("ShokujiMemoAndroid", "Saved InstanceState") |> ignore
     base.OnSaveInstanceState (outState)
-
-  override this.OnRestoreInstanceState (savedInstanceState) =
-    selectedDate <-
-      try
-        let (year, month, day) = (savedInstanceState.GetInt("selectedDateYear"), savedInstanceState.GetInt("selectedDateMonth"), savedInstanceState.GetInt("selectedDateDay"))
-        Log.Debug("ShokujiMemoAndroid", sprintf "%d %d %d" year month day) |> ignore
-        { Year = year; Month = month; Day = day }
-      with
-        _ -> Log.Debug("ShokujiMemoAndroid", "Not Found Date in Bundle") |> ignore
-             Date.fromDateTime(DateTime.Now)
-
-    let calendar = this.FindViewById<CalendarView>(Resource.Id.calendarView1)
-    let since = new DateTime(1970, 1, 1, 0, 0, 0)
-    let duration = selectedDate.ToDateTime() - since
-    calendar.SetDate((int64)duration.TotalMilliseconds, true, true)

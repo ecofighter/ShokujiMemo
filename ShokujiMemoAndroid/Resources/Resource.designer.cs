@@ -147,7 +147,7 @@ namespace ShokujiMemoAndroid
 		{
 			
 			// aapt resource value: 0x7F050000
-			public const int NoActionBar = 2131034112;
+			public const int ShokujiMemoTheme = 2131034112;
 			
 			static Style()
 			{
