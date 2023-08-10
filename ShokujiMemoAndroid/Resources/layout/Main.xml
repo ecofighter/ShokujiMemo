@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/calendarView1" />
             <TextView
-                android:text="@string/morning"
+                android:text="@string/breakfast"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -33,9 +33,9 @@
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textMorning" />
+                android:id="@+id/textBreakfast" />
             <TextView
-                android:text="@string/midday"
+                android:text="@string/lunch"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -43,9 +43,9 @@
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textMidday" />
+                android:id="@+id/textLunch" />
             <TextView
-                android:text="@string/evening"
+                android:text="@string/dinner"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -53,7 +53,7 @@
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textEvening" />
+                android:id="@+id/textDinner" />
             <TextView
                 android:text="@string/misc"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textMisc" />
             <Button
-                android:text="jump to today"
+                android:text="@string/jump_to_today"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/button1" />

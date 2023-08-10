@@ -53,16 +53,16 @@ namespace ShokujiMemoAndroid
 			public const int main_contents = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int textEvening = 2130771971;
+			public const int textBreakfast = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int textMidday = 2130771972;
+			public const int textDinner = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int textMisc = 2130771973;
+			public const int textLunch = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int textMorning = 2130771974;
+			public const int textMisc = 2130771974;
 			
 			// aapt resource value: 0x7F010007
 			public const int toolbar = 2130771975;
@@ -119,16 +119,19 @@ namespace ShokujiMemoAndroid
 			public const int app_name = 2130968576;
 			
 			// aapt resource value: 0x7F040001
-			public const int evening = 2130968577;
+			public const int breakfast = 2130968577;
 			
 			// aapt resource value: 0x7F040002
-			public const int midday = 2130968578;
+			public const int dinner = 2130968578;
 			
 			// aapt resource value: 0x7F040003
-			public const int misc = 2130968579;
+			public const int jump_to_today = 2130968579;
 			
 			// aapt resource value: 0x7F040004
-			public const int morning = 2130968580;
+			public const int lunch = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int misc = 2130968581;
 			
 			static String()
 			{

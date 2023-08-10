@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">食事メモ</string>
-    <string name="morning">朝</string>
-    <string name="midday">昼</string>
-    <string name="evening">夜</string>
+    <string name="breakfast">朝</string>
+    <string name="lunch">昼</string>
+    <string name="dinner">夜</string>
     <string name="misc">その他</string>
+    <string name="jump_to_today">今日のメモに戻る</string>
 </resources>
