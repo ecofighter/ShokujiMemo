@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="ShokujiMemoTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+  <style name="ShokujiMemoTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>
-    <item name="android:colorPrimary">#7A8622</item>
   </style>
 </resources>
