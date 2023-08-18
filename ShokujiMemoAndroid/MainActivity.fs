@@ -24,13 +24,13 @@ type MainActivity () =
   override this.OnCreate (bundle) =
     base.OnCreate (bundle)
     this.SetContentView (Resource.Layout.activity_main)
-    if bundle = null then
-      this.SupportFragmentManager.BeginTransaction()
-        .SetReorderingAllowed(true)
-        .Add(Resource.Id.fragment_container_view, new MainFragment())
-        .Commit() |> ignore
+    // if bundle = null then
+    //   this.SupportFragmentManager.BeginTransaction()
+    //     .SetReorderingAllowed(true)
+    //     .Add(Resource.Id.fragment_container_view, new MainFragment())
+    //     .Commit() |> ignore
 
-    this.ViewModel <- (new ViewModelProvider(this)).Get(Java.Lang.Class.FromType(typeof<MainViewModel>)) :?> MainViewModel
+    // this.ViewModel <- (new ViewModelProvider(this)).Get(Java.Lang.Class.FromType(typeof<MainViewModel>)) :?> MainViewModel
 
     // let calendar = this.FindViewById<CalendarView>(Resource.Id.calendarView1)
     // let since = new DateTime(1970, 1, 1, 0, 0, 0)

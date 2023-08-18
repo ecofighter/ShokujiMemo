@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragment_main">
+
+	<fragment
+        android:id="@+id/fragment_main"
+        android:name="ShokujiMemoAndroid.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+		<action
+				android:id="@+id/action_to_export"
+				app:destination="@id/fragment_export" />
+	</fragment>
+	<fragment
+        android:id="@+id/fragment_export"
+        android:name="ShokujiMemoAndroid.ExportFragment"
+        android:label="fragment_export"
+        tools:layout="@layout/fragment_export" >
+	</fragment>
+
+</navigation>

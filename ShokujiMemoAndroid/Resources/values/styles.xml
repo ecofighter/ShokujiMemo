@@ -4,4 +4,5 @@
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>
   </style>
+	<style name="aa" parent="@style/Theme.AppCompat.Light" />
 </resources>
