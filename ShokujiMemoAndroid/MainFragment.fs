@@ -4,7 +4,7 @@ open AndroidX.Core.View
 open AndroidX.Fragment.App
 open AndroidX.Lifecycle
 
-type MainMenuProvider(fragment : #Fragment) =
+type MainMenuProvider(fragment: #Fragment) =
   inherit Java.Lang.Object()
   interface IMenuProvider with
     member this.OnCreateMenu(menu, menuInflator) =
@@ -20,12 +20,11 @@ type MainFragment() =
   inherit Fragment(Resource.Layout.fragment_main)
 
   override this.OnCreateView(inflater, container, bundle) =
-    // base.OnCreateView(inflater, container, bundle)
     inflater.Inflate(Resource.Layout.fragment_main, container, false)
 
   override this.OnViewCreated(view, bundle) =
     base.OnViewCreated(view, bundle)
 
-    let mutable menuHost : IMenuHost = this.RequireActivity()
+    let mutable menuHost: IMenuHost = this.RequireActivity()
     let menuProvider = new MainMenuProvider(this)
     menuHost.AddMenuProvider(menuProvider, this.ViewLifecycleOwner, Lifecycle.State.Resumed)

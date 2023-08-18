@@ -6,7 +6,7 @@ open AndroidX.Core.View
 open AndroidX.Fragment.App
 open AndroidX.Lifecycle
 
-type ExportMenuProvider(fragment : #Fragment) =
+type ExportMenuProvider(fragment: #Fragment) =
   inherit Java.Lang.Object()
   interface IMenuProvider with
     member this.OnCreateMenu(menu, menuInflator) =
@@ -18,7 +18,7 @@ type ExportMenuProvider(fragment : #Fragment) =
         true
       | _ -> false
 
-type ExportButtonBackOnClickListener (fragment : #Fragment) =
+type ExportButtonBackOnClickListener (fragment: #Fragment) =
   inherit Java.Lang.Object()
   interface View.IOnClickListener with
     member this.OnClick(view) =
@@ -33,13 +33,12 @@ type ExportFragment() =
     this.HasOptionsMenu <- false
 
   override this.OnCreateView(inflater, container, bundle) =
-    // base.OnCreateView(inflater, container, bundle)
     inflater.Inflate(Resource.Layout.fragment_export, container, false)
 
   override this.OnViewCreated(view, bundle) =
     base.OnViewCreated(view, bundle)
 
-    let mutable menuHost : IMenuHost = this.RequireActivity()
+    let mutable menuHost: IMenuHost = this.RequireActivity()
     let menuProvider = new ExportMenuProvider(this)
     menuHost.AddMenuProvider(menuProvider, this.ViewLifecycleOwner, Lifecycle.State.Resumed)
     
