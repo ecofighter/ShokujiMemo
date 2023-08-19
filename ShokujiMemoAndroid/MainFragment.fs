@@ -3,8 +3,9 @@
 open AndroidX.Core.View
 open AndroidX.Fragment.App
 open AndroidX.Lifecycle
+open AndroidX.Navigation
 
-type MainMenuProvider(fragment: #Fragment) =
+type MainMenuProvider(fragment: Fragment) =
   inherit Java.Lang.Object()
   interface IMenuProvider with
     member this.OnCreateMenu(menu, menuInflator) =
@@ -12,7 +13,7 @@ type MainMenuProvider(fragment: #Fragment) =
     member this.OnMenuItemSelected(menuItem) =
       match menuItem.ItemId with
       | Resource.Id.action_export ->
-        AndroidX.Navigation.Navigation.FindNavController(fragment.View).Navigate(Resource.Id.action_to_export)
+        Navigation.FindNavController(fragment.View).Navigate(Resource.Id.action_to_export)
         true
       | _ -> false
 
